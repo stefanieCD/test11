@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index3.css">
+</head>
+<body>
+    <div class="top banxin">
+        <a href="./index2.html"><img src="./img/箭头.png" alt=""></a>
+        <h1>Parking Timer</h1>
+    </div>
+
+    <div class="djs banxin">
+        <div id="countdown">00 : 30 : 00 </div>
+    </div>
+
+    <div class="par banxin">
+        <p>Parking Area <span>Parking Lot of San Manolia</span></p>
+        <p>Address<span>9569,,Trantow Courts</span></p>
+        <p>Vehicle<span>Ford F Series(AF 4793 JU)</span></p>
+        <p>Parking Spot<span>1st Floor (A05)</span></p>
+        <p>Date<span>December 16, 2024</span></p>
+        <p>Duration<span> 4 hours</span></p>
+        <p>Hours<span> 09.00 AM-13.00 PM</span></p>
+    </div>
+
+    <div class="con banxin">
+        <a href="./index4.html">Extend Parking Time</a>
+    </div>
+    <script>
+                    
+        window.onload=function(){
+            var countdown=document.getElementById("countdown");
+            
+            var time=1800;
+             
+            
+            setInterval(function(){
+                time=time-1;
+               var minute=parseInt(time/60);
+               var second=parseInt(time%60);
+                countdown.innerHTML='00 : '+minute+' : '+second;
+            
+            
+            },1000);
+        }
+        
+    </script>
+</body>
+</html>
